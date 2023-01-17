@@ -1,0 +1,32 @@
+Model summary statistics:
+
+Area under the ROC curve (auc)           = 1.000000
+Mean cross-entropy (mxe)                 = 0.165483
+Precision-recall break-even point (prbe) = 1.000000
+Root-mean square error (rmse)            = 0.175665
+
+Contingency table for cutoff = 0.492281:
+
+             Actual P  Actual N     Total
+Predicted P       791         0       791
+Predicted N         0        89        89
+      Total       791        89       880
+
+Accuracy (acc)                                = 1.000000
+Error rate (err)                              = 0.000000
+Rate of positive predictions (rpp)            = 0.898864
+Rate of negative predictions (rnp)            = 0.101136
+
+True positive rate (tpr, or sensitivity)      = 1.000000
+False positive rate (fpr, or fallout)         = 0.000000
+True negative rate (tnr, or specificity)      = 1.000000
+False negative rate (fnr, or miss)            = 0.000000
+
+Positive prediction value (ppv, or precision) = 1.000000
+Negative prediction value (npv)               = 1.000000
+Prediction-conditioned fallout (pcfall)       = 0.000000
+Prediction-conditioned miss (pcmiss)          = 0.000000
+
+Matthews correlation coefficient (mcc)        = 1.000000
+Odds ratio (odds)                             = Inf
+SAR                                           = 0.725222

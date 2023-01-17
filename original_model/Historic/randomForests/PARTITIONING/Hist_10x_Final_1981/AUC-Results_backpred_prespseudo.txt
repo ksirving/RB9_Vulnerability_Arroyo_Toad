@@ -1,0 +1,61 @@
+Model summary statistics:
+
+Area under the ROC curve (auc)           = 0.957231
+Mean cross-entropy (mxe)                 = 0.281163
+Precision-recall break-even point (prbe) = 0.913211
+Root-mean square error (rmse)            = 0.276503
+
+Contingency table for cutoff = 0.680962:
+
+             Actual P  Actual N     Total
+Predicted P       973       101      1074
+Predicted N        64       936      1000
+      Total      1037      1037      2074
+
+Accuracy (acc)                                = 0.920444
+Error rate (err)                              = 0.079556
+Rate of positive predictions (rpp)            = 0.517840
+Rate of negative predictions (rnp)            = 0.482160
+
+True positive rate (tpr, or sensitivity)      = 0.938284
+False positive rate (fpr, or fallout)         = 0.097396
+True negative rate (tnr, or specificity)      = 0.902604
+False negative rate (fnr, or miss)            = 0.061716
+
+Positive prediction value (ppv, or precision) = 0.905959
+Negative prediction value (npv)               = 0.936000
+Prediction-conditioned fallout (pcfall)       = 0.094041
+Prediction-conditioned miss (pcmiss)          = 0.064000
+
+Matthews correlation coefficient (mcc)        = 0.841423
+Odds ratio (odds)                             = 140.892327
+SAR                                           = 0.718059
+
+
+#Calculated Threshold Value (Probably most Correctly Classified) (also hightest TSS)
+#		Sens		Spec
+#0.680961904 0.9382835101 0.9026036644
+
+
+#Lowest value w/ Sensitivity = 1 is 0.43512684 (at this point TNR = 0.801002893)
+
+
+#With Threshold set to Max TSS (0.680961904)
+> freq(predPA) #Provides data to calculate Min. Occupied Area
+     value  count
+[1,]     0  43860
+[2,]     1   2445
+[3,]    NA 408644
+> freq(predPA)[2,2]/(freq(predPA)[2,2]+freq(predPA)[1,2])
+     count 
+0.05280207 #Proportion of Pixels Predicted as Pres
+
+
+#With Threshold set to Min Value of Sens=1 (0.43512684)
+     value  count
+[1,]     0  39650
+[2,]     1   6655
+[3,]    NA 408644
+> freq(predPA)[2,2]/(freq(predPA)[2,2]+freq(predPA)[1,2])
+   count 
+0.143721 #Proportion of Pixels Predicted as Pres

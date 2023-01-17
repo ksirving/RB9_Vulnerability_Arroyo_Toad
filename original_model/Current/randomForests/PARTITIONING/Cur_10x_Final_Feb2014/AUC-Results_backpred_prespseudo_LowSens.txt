@@ -1,0 +1,43 @@
+Model summary statistics:
+
+Area under the ROC curve (auc)           = 0.958376
+Mean cross-entropy (mxe)                 = 0.296875
+Precision-recall break-even point (prbe) = 0.924147
+Root-mean square error (rmse)            = 0.279519
+
+Contingency table for cutoff = 0.492000:
+
+             Actual P  Actual N     Total
+Predicted P       791       112       903
+Predicted N         0       679       679
+      Total       791       791      1582
+
+Accuracy (acc)                                = 0.929204
+Error rate (err)                              = 0.070796
+Rate of positive predictions (rpp)            = 0.570796
+Rate of negative predictions (rnp)            = 0.429204
+
+True positive rate (tpr, or sensitivity)      = 1.000000
+False positive rate (fpr, or fallout)         = 0.141593
+True negative rate (tnr, or specificity)      = 0.858407
+False negative rate (fnr, or miss)            = 0.000000
+
+Positive prediction value (ppv, or precision) = 0.875969
+Negative prediction value (npv)               = 1.000000
+Prediction-conditioned fallout (pcfall)       = 0.124031
+Prediction-conditioned miss (pcmiss)          = 0.000000
+
+Matthews correlation coefficient (mcc)        = 0.867144
+Odds ratio (odds)                             = Inf
+SAR                                           = 0.722366
+
+
+
+> freq(predPA) #Provides data to calculate Min. Occupied Area
+     value  count
+[1,]     0  41441
+[2,]     1   4864
+[3,]    NA 408644
+> freq(predPA)[2,2]/(freq(predPA)[2,2]+freq(predPA)[1,2])
+    count 
+0.1050427 

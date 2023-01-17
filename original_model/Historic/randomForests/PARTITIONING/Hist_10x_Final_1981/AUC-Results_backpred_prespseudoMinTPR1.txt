@@ -1,0 +1,53 @@
+#
+
+
+Model summary statistics:
+
+Area under the ROC curve (auc)           = 0.957231
+Mean cross-entropy (mxe)                 = 0.281163
+Precision-recall break-even point (prbe) = 0.913211
+Root-mean square error (rmse)            = 0.276503
+
+Contingency table for cutoff = 0.435127:
+
+             Actual P  Actual N     Total
+Predicted P      1036       198      1234
+Predicted N         1       839       840
+      Total      1037      1037      2074
+
+Accuracy (acc)                                = 0.904050
+Error rate (err)                              = 0.095950
+Rate of positive predictions (rpp)            = 0.594986
+Rate of negative predictions (rnp)            = 0.405014
+
+True positive rate (tpr, or sensitivity)      = 0.999036
+False positive rate (fpr, or fallout)         = 0.190935
+True negative rate (tnr, or specificity)      = 0.809065
+False negative rate (fnr, or miss)            = 0.000964
+
+Positive prediction value (ppv, or precision) = 0.839546
+Negative prediction value (npv)               = 0.998810
+Prediction-conditioned fallout (pcfall)       = 0.160454
+Prediction-conditioned miss (pcmiss)          = 0.001190
+
+Matthews correlation coefficient (mcc)        = 0.823089
+Odds ratio (odds)                             = 4389.919192
+SAR                                           = 0.712595
+
+
+
+> Kappa(confu)
+[1] 0.8081003
+
+
+TSS= 0.919291
+
+#With Threshold set to Min Value of Sens=1 (0.43512684)
+     value  count
+[1,]     0  39650
+[2,]     1   6655
+[3,]    NA 408644
+> freq(predPA)[2,2]/(freq(predPA)[2,2]+freq(predPA)[1,2])
+   count 
+0.143721 #Proportion of Pixels Predicted as Pres
+
